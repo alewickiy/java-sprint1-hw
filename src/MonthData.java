@@ -14,8 +14,8 @@ public class MonthData {
     int bestSeriesPerMonth(int goalByStepsPerDay) {
         int bestSeriesCount = 0;
         int seriesTempCount = 0;
-        for (int i = 0; i < days.length; i++) {
-            if (days[i] >= goalByStepsPerDay) {
+        for (int day : days) {
+            if (day >= goalByStepsPerDay) {
                 seriesTempCount++;
             } else {
                 if (bestSeriesCount < seriesTempCount) {
