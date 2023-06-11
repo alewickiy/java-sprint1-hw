@@ -75,8 +75,6 @@ public class StepTracker {
         return monthToData[monthId].days[dayId];
     }
 
-    //TODO check!!!!*************
-
     int checkMonth() {
         int monthId;
         while (true) {
