@@ -8,20 +8,26 @@ public class Main {
         while (true) {
             printMenu();
             int userChoice = scanner.nextInt();
-            if (userChoice == 1) {
-                System.out.printf("В этот день вы прошли %d шагов\n", stepTracker.stepsPerDayMonth());
-            } else if (userChoice == 2) {
-                stepTracker.changeStepGoal();
-            } else if (userChoice == 3) {
-                stepTracker.printStatistic();
-            } else if (userChoice == 4) {
-                stepTracker.addNewNumberStepsPerDay();
-            } else if (userChoice == 0) {
-                System.out.println("Удачи в достижении цели. До новых встреч");
-                scanner.close();
-                System.exit(0);
-            } else {
-                System.out.println("Данная команда пока не поддерживается.");
+            switch (userChoice) {
+                case 1:
+                    System.out.printf("В этот день вы прошли %d шагов\n", stepTracker.stepsPerDayMonth());
+                    break;
+                case 2:
+                    stepTracker.changeStepGoal();
+                    break;
+                case 3:
+                    stepTracker.printStatistic();
+                    break;
+                case 4:
+                    stepTracker.addNewNumberStepsPerDay();
+                    break;
+                case 0:
+                    System.out.println("Удачи в достижении цели. До новых встреч");
+                    scanner.close();
+                    System.exit(0);
+                default:
+                    System.out.println("Данная команда пока не поддерживается.");
+
             }
         }
     }
